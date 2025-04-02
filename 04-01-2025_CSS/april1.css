@@ -1,0 +1,53 @@
+body{background-color: aquamarine;}
+
+.floatbox{
+    background-color: lawngreen;
+    height:200px;
+    margin-bottom: 10%;
+}
+.floatbox>div{
+    background-color: lightcoral;
+    width:30%;
+    float:left;
+    margin-left: 2%;
+    height:50%;
+    margin-bottom: 2%;
+}
+.flexbox{
+height:1000px;
+background-color: rgb(51, 70, 15);
+display: flex;
+flex-wrap: wrap;
+/* main axis vs cross axis */
+flex-direction: column-reverse;
+align-items:center ;  /*reference cross axis only*/
+justify-content: center;  /*reference main axis only
+
+/* height:200px; */
+}
+.flexbox>div{
+    border:2px solid;  
+    
+}
+.sub1{
+    /* flex::;
+    order:;
+    align-self: */
+    width:100px;
+    /* font-size: 2vh; */
+    /* width:100px;
+    height:100%;
+    background-color: azure; */
+}
+
+.sub2{
+    /* width:16%; */
+    /* height:60%; */
+}
+.sub3{
+    /* width:10vw;
+    height:300px; */
+    width:24vw;
+}
+
+
