@@ -1,0 +1,40 @@
+body {
+  background-color: bisque;
+}
+
+h1 {
+  font-size: 60px;
+  color: lightcoral;
+  background-color: aquamarine;
+  animation-name: moveh1;
+  animation-duration: 4s;
+  animation-delay: 0ms;
+  margin-left: 0;
+  animation-iteration-count: infinite;
+}
+
+@keyframes moveh1 {
+  0% {
+    margin-left: 10%;
+    width: 50%;
+    border: 3px solid salmon;
+  }
+  33% {
+    margin-left: 30%;
+    width: 30%;
+  }
+  50% {
+    margin-left: 12%;
+    margin-top: 0;
+    width: 30%;
+  }
+  66% {
+    margin-left: 60%;
+    width: 30%;
+  }
+  100% {
+    margin-left: 30%;
+    margin-top: 30%;
+    width: 60%;
+  }
+}
