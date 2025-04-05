@@ -1,44 +1,76 @@
 body {
-  background-color: rgb(152, 178, 201);
+  background-color: aquamarine;
 }
 
-.herobox {
+.frame {
+  border: 2px solid red;
   height: 500px;
-  background-image: url('../assets/tree-6147402_640.jpg');
-  background-size: 100% 100%;
-  background-repeat: repeat;
-  position: relative;
+  /* width: 400%; */
+  overflow: hidden;
+  text-align: center;
+  width: 90%;
+  margin: auto;
 }
 
-.herobox > div {
-  position: absolute;
-  bottom: 0;
-  width: 20%;
-  height: 20%;
-  border: 3px solid hotpink;
-  animation: movebus 3s;
+.slideWrapper {
+  width: 400%;
+  height: 100%;
+  animation: slideshow 8s;
+  /* margin-left: -100%; */
   animation-iteration-count: infinite;
 }
 
-.herobox > div > img {
-  width: 100%;
+@keyframes slideshow {
+  0% {
+  }
+  25% {
+    margin-left: -100%;
+  }
+  50% {
+    margin-left: -200%;
+  }
+  75% {
+    margin-left: -300%;
+  }
+  100% {
+    margin-left: -300%;
+  }
+}
+
+.slideWrapper > div {
+  /* background-color: bisque; */
+  /* border: 2px solid rgb(190, 136, 255); */
+  width: 25%;
+  float: left;
   height: 100%;
 }
 
-@keyframes movebus {
-  0% {
-    right: 50px;
-  }
-  30% {
-    right: 100px;
-  }
-  50% {
-    right: 250px;
-    bottom: 100px;
-    width: 16%;
-  }
-  100% {
-    right: 500px;
-    transform:rotate(180deg);
-  }
+.slideWrapper > div > img {
+  height: 100%;
+  width: 100%;
+}
+
+/* .slide:nth-child(1) */
+.s1 {
+  background-color: aliceblue;
+  background-image: url('../assets/mong-bui-xdJN-7PZs5o-unsplash.jpg');
+  background-size: 100% 100%;
+}
+
+.s2 {
+  background-color: bisque;
+  background-image: url('../assets/elena-koycheva-PFzy4N0_R3M-unsplash.jpg');
+  background-size: 100% 100%;
+}
+
+.s3 {
+  background-color: aqua;
+  background-image: url('../assets/shamblen-studios-JBsXa_-qxIc-unsplash.jpg');
+  background-size: 100% 100%;
+}
+
+.s4 {
+  background-color: cadetblue;
+  background-image: url('../assets/allison-saeng-_tarARuYFAU-unsplash.jpg');
+  background-size: 100% 100%;
 }
