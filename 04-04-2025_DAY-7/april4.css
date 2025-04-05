@@ -6,14 +6,14 @@ h1 {
   font-size: 60px;
   color: lightcoral;
   background-color: aquamarine;
-  animation-name: moveh1;
+  /* animation-name: moveh1; */
   animation-duration: 4s;
   animation-delay: 0ms;
   margin-left: 0;
-  animation-iteration-count: infinite;
+  /* animation-iteration-count: infinite; */
 }
 
-@keyframes moveh1 {
+/* @keyframes moveh1 {
   0% {
     margin-left: 10%;
     width: 50%;
@@ -36,5 +36,45 @@ h1 {
     margin-left: 30%;
     margin-top: 30%;
     width: 60%;
+  }
+} */
+
+.herobox {
+  height: 500px;
+  background-image: url('../assets/shamblen-studios-JBsXa_-qxIc-unsplash.jpg');
+  background-size: 100% 100%;
+  background-repeat: repeat;
+  position: relative;
+}
+
+.herobox > div {
+  position: absolute;
+  bottom: 0;
+  width: 20%;
+  height: 20%;
+  border: 3px solid hotpink;
+  animation: lollipop 2s;
+  animation-iteration-count: infinite;
+}
+
+.herobox > div > img {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes lollipop {
+  0% {
+    left: 50px;
+  }
+  30% {
+    left: 100px;
+  }
+  50% {
+    left: 250px;
+    bottom: 100px;
+    width: 16%;
+  }
+  100% {
+    left: 500px;
   }
 }
