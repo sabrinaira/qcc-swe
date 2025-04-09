@@ -1,0 +1,48 @@
+body {
+  background-color: aquamarine;
+}
+
+ul {
+  list-style-type: none;
+  width: 20%;
+  text-align: center;
+}
+
+ul > li {
+  background-color: lightgreen;
+  height: 60px;
+  /* padding: 10px 30px; */
+  align-content: center;
+}
+
+li > a {
+  display: inline-block;
+  width: 16%;
+  text-decoration: none;
+  padding: 24px 42%;
+}
+
+li > a:hover {
+  background-color: orange;
+}
+
+.smallbox {
+  width:25%;
+  height: 100px;
+  border: 2px solid orange;
+  overflow: scroll;
+}
+
+.herobox {
+  border: 2px solid purple;
+  height: 300px;
+  width: 50%;
+  margin: auto;
+}
+
+.herobox > div {
+  position: absolute;
+  left: 30%;
+  border: 3px solid red;
+  width: 30%;
+}
