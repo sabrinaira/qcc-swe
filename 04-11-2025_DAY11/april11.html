@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>MAIN TITLE</h1>
+    <button onclick="alert('Hello JS!')">click me</button>
+
+    <nav class="nav nav-pills">
+      <a href="" class="nav-item nav-link active">Home</a>
+      <a href="" class="nav-item nav-link">About</a>
+      <a href="" class="nav-item nav-link">Products</a>
+      <a href="" class="nav-item nav-link">Contact</a>
+    </nav>
+
+    <nav class="navbar navbar-expand-sm bg-info">
+      <button
+        class="navbar-toggle btn btn-warning"
+        data-bs-target="#apple"
+        data-bs-toggle="collapse"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="apple" class="navbar-collapse collapse">
+        <div class="navbar-nav">
+          <a href="" class="nav-item nav-link active">Home</a>
+          <a href="" class="nav-item nav-link">About</a>
+          <a href="" class="nav-item nav-link">Products</a>
+          <a href="" class="nav-item nav-link">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <div>
+      <h1>product 1</h1>
+      <img src="" alt="product1" />
+      <br />
+      <button class="btn btn-primary" data-bs-target="kiwi">Check more</button>
+    </div>
+
+    <!-- bootstrap modal window: -->
+    <div id="kiwi" class="modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button data-bs-dismiss="modal">x</button>
+          <a href="#grape">Continue shopping</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CSS MODAL window -->
+    <div>
+      <h1>product 1</h1>
+      <img src="" alt="product1" /> <br />
+      <button><a href="#grape"></a></button>
+    </div>
+
+    <div>
+      <div id="grape" class="mdlstyle"></div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./april11.js"></script>
+  </body>
+</html>
