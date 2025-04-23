@@ -13,7 +13,7 @@ SELECT COUNT(*) FROM movies_actors
 union all
 SELECT COUNT(*) from actors
 union all
-SELECT COUNT(*) FROM direcotrs
+SELECT COUNT(*) FROM directors
 
 SELECT * FROM actors WHERE gender='F'
 
