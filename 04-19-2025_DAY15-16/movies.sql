@@ -56,6 +56,7 @@ actor_id integer references actors (actor_id)
 );
 
 SELECT * FROM movies_actors
+DROP TABLE movie_actors;
 
 
 
