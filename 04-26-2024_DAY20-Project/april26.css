@@ -1,0 +1,23 @@
+body {
+  background-color: blanchedalmond;
+}
+
+.container {
+  margin: auto;
+  width: 500px;
+  background: lightcoral;
+  border: 4px solid lightpink;
+  padding: 1rem;
+}
+
+.lat {
+  color: darkcyan;
+}
+
+.lon {
+  color: darkolivegreen;
+}
+
+.alt {
+  color: darkslategray;
+}
