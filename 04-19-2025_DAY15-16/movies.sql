@@ -8,7 +8,7 @@ date_of_birth DATE
 );
 
 SELECT * FROM actors;
-DROP TABLE actors;
+-- DROP TABLE actors;
 
 -- table 2
 CREATE TABLE directors (
@@ -20,7 +20,7 @@ nationality VARCHAR(20)
 );
 
 SELECT * FROM directors;
-DROP TABLE directors;
+-- DROP TABLE directors;
 
 -- table 3
 CREATE TABLE movies (
@@ -34,7 +34,7 @@ director_id integer references directors (director_id)
 );
 
 SELECT * FROM movies;
-DROP TABLE movies;
+-- DROP TABLE movies;
 
 
 -- table 4
@@ -47,7 +47,7 @@ international_takings NUMERIC(6,2)
 
 SELECT * FROM movie_revenues;
 
-DROP TABLE movie_revenues;
+-- DROP TABLE movie_revenues;
 
 -- table 5
 CREATE TABLE movies_actors (
@@ -56,7 +56,7 @@ actor_id integer references actors (actor_id)
 );
 
 SELECT * FROM movies_actors
-DROP TABLE movie_actors;
+-- DROP TABLE movie_actors;
 
 
 
@@ -70,10 +70,10 @@ SELECT count(*) from movie_revenues
 
 
 -- to start everything over
-DROP TABLE IF EXISTS 
-  movie_revenues, 
-  movies_actors, 
-  movies, 
-  directors, 
-  actors 
-CASCADE;
+-- DROP TABLE IF EXISTS
+--   movie_revenues,
+--   movies_actors,
+--   movies,
+--   directors,
+--   actors
+-- CASCADE;
