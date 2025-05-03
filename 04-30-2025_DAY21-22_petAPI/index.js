@@ -1,10 +1,9 @@
 const express = require('express');
+const pets = require('./data/pets.json');
+const bodyParser = require('body-parser');
+const fs = require('fs');
 
 const port = 3000;
-const pets = require('./data/pets.json');
-
-const bodyParser = require('body-parser');
-
 const app = express();
 app.use(bodyParser.json());
 
@@ -37,17 +36,49 @@ app.get('/pets/:id', (req, res) => {
 app.post('/pets', (req, res) => {
   console.log(req.body);
   const { pet_name, species, age } = req.body;
+  const pet_ids = pets.map((val) => val.id);
 
   const newPet = {
-    id,
+    id: (pet_ids.length > 0 ? Math.max(...pet_ids) : 0) + 1,
     pet_name,
     species,
-    age
+    age,
+  };
+
+  const new_pets = pets.concat(newPet);
+  fs.writeFile('./data/pets.json', JSON.stringify(new_pets), (err) =>
+    console.log(err)
+  );
+  res.json(newPet);
+});
+
+app.put('/pets/:id', (req, res) => {
+  const { id } = req.params;
+  const { pet_name, species, age } = req.body;
+
+  const old_pet = pets.find((val) => val.id == id);
+
+  if (pet_name) {
+    old_pet.pet_name = pet_name;
   }
 
-  res.json()
-  // import the fs
-  // figure out how to insert new data to the json file
+  if (species) {
+    old_pet.species = species;
+  }
+
+  if (age) {
+    old_pet.age = age;
+  }
+
+  fs.writeFile('./data/pets.json', JSON.stringify(pets), (err) =>
+    console.log(err)
+  );
+
+  res.json(pets);
 });
+
+// app.filter('/pets/:id', (req, res) => {});
+
+// app.delete('/pets/:id', (req, res) => {});
 
 app.listen(port, () => console.log(`Listening to port ${port}`));
