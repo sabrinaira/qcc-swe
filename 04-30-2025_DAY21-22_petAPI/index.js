@@ -7,6 +7,7 @@ const port = 3000;
 const app = express();
 app.use(bodyParser.json());
 
+// ? READ ALL
 app.get('/pets', (req, res) => {
   // console.log('requesting pets...');
 
@@ -15,6 +16,7 @@ app.get('/pets', (req, res) => {
   res.json(pets);
 });
 
+// ? READ RANDOM
 app.get('/pets/random', (req, res) => {
   // console.log('request a random pet info');
 
@@ -22,17 +24,13 @@ app.get('/pets/random', (req, res) => {
   res.json(pets[randomPet]);
 });
 
-// app.get('/pets/random', (req, res) => {
-//   // console.log('request a random pet info');
-
-//   res.json(pets[Math.floor(Math.random() * pets.length)]);
-// });
-
+// ? READ PET
 app.get('/pets/:id', (req, res) => {
   console.log(req.param.id);
   res.json(pets.find((obj) => obj.id == req.params.id));
 });
 
+// & CREATE PET
 app.post('/pets', (req, res) => {
   console.log(req.body);
   const { pet_name, species, age } = req.body;
@@ -52,6 +50,7 @@ app.post('/pets', (req, res) => {
   res.json(newPet);
 });
 
+// * UPDATE PET
 app.put('/pets/:id', (req, res) => {
   const { id } = req.params;
   const { pet_name, species, age } = req.body;
@@ -79,6 +78,18 @@ app.put('/pets/:id', (req, res) => {
 
 // app.filter('/pets/:id', (req, res) => {});
 
-// app.delete('/pets/:id', (req, res) => {});
+// ! DELETE PET
+app.delete('/pets/:id', (req, res) => {
+  const { id } = req.params;
+  const deletePet = pets.filter((obj) => obj.id == id);
+  console.log('Deleted Pet:', deletePet);
+
+  const updatedPets = pets.filter((obj) => obj.id != id);
+
+  fs.writeFile('./data/pets.json', JSON.stringify(updatedPets), (err) =>
+    console.log(err)
+  );
+  res.json(deletePet);
+});
 
 app.listen(port, () => console.log(`Listening to port ${port}`));
