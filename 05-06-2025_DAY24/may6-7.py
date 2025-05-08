@@ -80,14 +80,14 @@ def addNum(num):
     print("function result:", sum)
 
 
-addNum(10)
+# addNum(10)
 
 
 def someFunction(a, b, c=100, d="Hello"):
     print(a, b, c, d)
 
 
-someFunction("first", "second")
+# someFunction("first", "second")
 
 
 def addNum2(*num):
@@ -97,8 +97,8 @@ def addNum2(*num):
     print(sum)
 
 
-addNum2(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
-addNum2(1, 10, 13)
+# addNum2(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+# addNum2(1, 10, 13)
 
 
 def show_info(**num):
@@ -106,12 +106,39 @@ def show_info(**num):
         print("The student's %s is %s" % (i, j))
 
 
-show_info(
-    first_name="Peter", last_name="Smith", birthYear=1990, email="peter@gmail.com"
-)
+# show_info(
+#     first_name="Peter", last_name="Smith", birthYear=1990, email="peter@gmail.com"
+# )
 
 
 # & Practice: create a function that can calculate average score.
 # & Pass in values such as 100, 99, 90
 
 # def showStuInfo(schoolName, *lastName, **firstNameEmail ):
+
+
+# & Create a function that can check if a number is prime number
+def is_prime(num):
+    if num % 2 == 0 or num % 3 == 0:
+        print("Composite")
+    else:
+        print("Prime")
+
+
+is_prime(11)
+is_prime(12)
+is_prime(13)
+is_prime(25)
+
+
+def checkIfPrime(num):
+    for x in range(2, num):
+        if num % x == 0:
+            return 'Composite Number'
+    return 'Prime Number'
+
+
+print(checkIfPrime(11))
+print(checkIfPrime(12))
+print(checkIfPrime(13))
+print(checkIfPrime(25))
