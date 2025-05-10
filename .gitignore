@@ -3,6 +3,8 @@
 /node_modules
 /*/node_modules
 /*/*/node_modules
+virtual/
+venv/
 
 # Windows
 Thumbs.db
