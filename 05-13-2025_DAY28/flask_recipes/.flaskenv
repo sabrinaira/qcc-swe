@@ -1,0 +1,5 @@
+FLASK_ENV=development
+FLASK_APP=app.py
+
+DB_PASSWORD=
+PORT=5432

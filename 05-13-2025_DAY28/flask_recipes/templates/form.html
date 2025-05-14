@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1 class="bg-secondary w-50 m-3 text-center">Enter a new recipe here:</h1>
+
+  <form action="/results" method="POST" class="reounded border border-info bg-secondary">
+    <label for="recipe_name">Enter Recipe Name:<label>
+    <input type="text" id="recipe_name" name="recp_name"><br /><br />
+
+    <label for="">Enter Ingredients:<label>
+    <input type="text" name="recp_ingrdnts"><br /><br />
+
+    <label for="">Enter Recipe Instructions:<label>
+    <input type="text" name="recp_steps"><br /><br />
+
+    <button type="submit">Submit Recipe!</button>
+  </form>
+
+</body>
+</html>

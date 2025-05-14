@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='bootstrap.css')}}"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 class="bg-secondary w-50 text-info">Recipe App - Title</h1>
+    {%if recipe_name%}
+    <p>{{recipe_name}}</p>
+    {%else%}
+    <p>No recipe available!</p>
+    {%endif%}
+
+    <div>
+      <a class="btn btn-lg btn-warning mx-3 my-3" href="{{url_for('form')}}"
+        >Add Recipe</a
+      >
+    </div>
+
+    <ul class="list-group">
+      {% for i in recipe_name %}
+      <li class="list-group-item">{{i}}</li>
+      {% endfor %}
+    </ul>
+
+    <div class="border border-info rounded mx-5 my-5">
+      <div>
+        <h1 class="w-50 mx-5 my-3 bg-warning text-danger">?</h1>
+        <p class="w-50 mx-5 my-3 bg-info text-secondary">?</p>
+        <p class="w-50 mx-5 my-3 bg-light text-danger">?</p>
+      </div>
+    </div>
+  </body>
+</html>
