@@ -16,14 +16,23 @@ db = SQLAlchemy(app)
 
 class FavRecipe(db.model):
     id = db.Column(db.Integer, primary_key=True)
-    recipe_name=
-    recipe_ingredients=
-    recipe_steps=
+    recipe_name = db.Column(db.String(50))
+    recipe_ingredients = db.Column(db.String(255))
+    recipe_steps = db.Column(db.String(1000))
+
+    def __init__(self, pName, pIngdnt, pSteps):
+        self.recipe_name = pName
+        self.recipe_ingredients = pIngdnt
+        self.recipe_steps = pSteps
+
+
+with app.app_context():
+    db.create_all()
 
 
 @app.route("/")
 def index():
-    db_recipe_results=FavRecipe.query.all()
+    db_recipe_results = FavRecipe.query.all()
     return render_template(
         "index.html", recipe_name=["Pizza", "Burger", "Pasta", "French Fries"]
     )

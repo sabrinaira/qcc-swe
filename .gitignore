@@ -5,6 +5,7 @@
 /*/*/node_modules
 virtual/
 venv/
+.env
 
 # Windows
 Thumbs.db
